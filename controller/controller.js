@@ -28,6 +28,7 @@ class Controller {
   };
 
   handleHits = () => {
+    console.log(this.hits);
     return this.service.checkHits(this.hits, this.word);
   };
 
@@ -54,7 +55,7 @@ class Controller {
 
   fetchWord() {
     fetch('../resources/words.json')
-      .then(function(response) {
+      .then(function (response) {
         return response.json();
       })
       .then(myJson => {
